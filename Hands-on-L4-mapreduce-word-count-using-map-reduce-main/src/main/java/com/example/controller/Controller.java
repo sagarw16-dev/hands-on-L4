@@ -19,7 +19,6 @@ public class Controller{
         Job job = Job.getInstance(conf, "word count");
         job.setJarByClass(Controller.class);
         job.setMapperClass(WordMapper.class);
-        job.setCombinerClass(WordReducer.class);
         job.setReducerClass(WordReducer.class);
         job.setOutputKeyClass(Text.class);
         job.setOutputValueClass(IntWritable.class);
